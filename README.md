@@ -5,13 +5,13 @@ Repositório de criação de arquivos shapefiles de acordo com as Regiões Integ
 ## Índice de Conteúdo
 
 - [Descrição do Projeto](#descrição-do-projeto)
+- [Shapefile do RISP do estado do Espírito Santo](#criação-de-shapefile-do-risp-do-estado-espírito-santo)
 - [Programas e Arquivos Usados](#programas-e-arquivos-usados)
 - [Instalação e Dependências](#instalação-e-dependências)
 - [Guia de Uso](#guia-de-uso)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Licença](#licença)
 - [Autores](#autores)
-- [Agradecimentos](#agradecimentos)
 - [Referência](#referência)
 
 ## Descrição do Projeto
@@ -22,6 +22,10 @@ As RISP são um arranjo territorial no qual há uma divisão em microrregiões e
 
 Esse projeto busca preencher uma lacuna, já que poucos estados brasileiros possuem arquivos shapefiles divididos por RISP. O repositório visa ajudar profissionais e pesquisadores interessados em arquivos geoespaciais que refletem a divisão das RISP no Espírito Santo.
 
+## Shapefile do RISP do estado do Espírito Santo
+
+Se você deseja somente baixar o shapefile com as regiões do RISP do ES, basta realizar o download [nesse link](/output/SHAPEFILE_RISP_ES.zip).
+
 ## Programas e arquivos usados
 
 - Arquivo shapefile do estado do Espírito Santo (disponível no site do IBGE).
@@ -29,15 +33,16 @@ Esse projeto busca preencher uma lacuna, já que poucos estados brasileiros poss
 
 ## Instalação e Dependências
 
-Para rodar o projeto, certifique-se de ter as seguintes dependências instaladas:
+Para rodar o projeto, ou seja, para juntar as partes das cidades e tornar um região, certifique-se de ter as seguintes dependências instaladas:
 
 - **Python** 3.x
-- Bibliotecas: `...`, `...` e `...`
+- Bibliotecas: `os`, `unidecode`, `pandas`, `geopandas`,  e `matplotlib.pylot`
 
 Instale as dependências com:
 
 ```bash
-pip install ... ... ...
+!pip install unidecode -q
+!pip install geopandas -q
 ```
 
 ## Guia de Uso
@@ -54,7 +59,7 @@ Navegue até o diretório do projeto:
 cd seurepositorio
 ```
 
-Execute o script principal para gerar o shapefile:
+Execute o script principal para gerar o shapefile. Nele, há uma passo a passo de como as cidades se relacionam com o RISP que está em `data`:
 
 ```bash
 python scripts/shapefile_risp_es.ipynb
@@ -79,10 +84,6 @@ seurepositorio/
 - [Arthur Diego Pereira](https://www.linkedin.com/in/arthurdiegopereira/)
 - [Matheus Henrique Malta Valadares](https://github.com/matheus-valadares)
 - [Rafhael de Oliveira Martins](https://github.com/rafhaelom)
-
-## Agradecimentos
-
-...
 
 ## Referência
 
